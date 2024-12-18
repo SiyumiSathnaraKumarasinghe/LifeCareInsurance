@@ -18,6 +18,7 @@ Welcome to the **Life Insurance Management System** project! This web applicatio
 ## 🖥️ Technologies Used
 
 - **Frontend**: HTML, CSS, JavaScript
-- **Backend**: Node.js
-- **Database**: MongoDB
-- **Version Control**: Git, GitHub
+- **Backend**: PHP
+- **Database**: MySQL, PhpMyAdmin
+- **Tools**: XAMPP, VS code
+- **Version Control**: GitHub, GitHub Desktop
