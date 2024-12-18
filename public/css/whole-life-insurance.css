@@ -1,0 +1,84 @@
+/* General Reset */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    position: relative; /* For positioning the overlay */
+    color: #333;
+}
+
+/* Add the overlay for fading effect */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/public/images/backg.png') no-repeat center center fixed;
+    background-size: cover;
+    opacity: 0.55; 
+    z-index: -1; /* Ensures the overlay is behind the content */
+}
+
+/* Main Content */
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 1rem;
+    min-height: 80vh;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Whole Life Section */
+.whole-life-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background: rgba(240, 248, 255, 0.9); /* Light translucent background */
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Whole Life Image */
+.whole-life-image {
+    max-width: 400px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Description Content */
+.description {
+    max-width: 600px;
+    text-align: left;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+.text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.benefits {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin: 1rem 0;
+    color: #444;
+}
+
+.benefits li {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}

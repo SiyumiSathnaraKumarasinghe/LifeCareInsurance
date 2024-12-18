@@ -1,0 +1,148 @@
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Hero Section (Carousel) */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 1s ease-in-out;
+}
+
+.carousel-image {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+/* Intro Section */
+.intro {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem 2rem;
+    background-color: #f8f9fa;
+}
+
+
+.intro-content {
+    background-color: rgba(87, 83, 83, 0.5); /* Translucent ash color */
+    padding: 2rem 3rem;
+    border-radius: 15px;
+    width: 50%;
+    color: #fff;
+    font-family: Tahoma, Verdana, sans-serif; /* Elegant and professional font */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.des {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    font-weight: 400; /* Lighter font weight for better readability */
+}
+
+.image5 {
+    width: 50%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow on the image */
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+    .intro {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .intro-content {
+        width: 80%;
+        margin-bottom: 2rem;
+    }
+
+    .image5 {
+        width: 120%;
+        max-width: 500px;
+    }
+}
+
+/* Plans Section */
+.plans {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 3rem 2rem;
+}
+
+.plan {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Tahoma, Verdana, sans-serif;
+    text-align: center;
+    width: 300px;
+}
+
+.plan img {
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.plan img:hover {
+    transform: scale(1.05);
+}
+
+.plan h4 {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #007bff;
+}
+
+@media (max-width: 768px) {
+    .plans {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .plan {
+        width: 80%;
+        margin-bottom: 2rem;
+    }
+
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-text p {
+        font-size: 1.2rem;
+    }
+}

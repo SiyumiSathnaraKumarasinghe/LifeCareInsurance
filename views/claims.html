@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claims Page - Life Care Insurance</title>
+    <link rel="stylesheet" href="/public/css/claims.css">
+</head>
+<body>
+    <!-- Header -->
+    <div id="header"></div>
+
+    <!-- Main Content -->
+    <main class="content">
+        <h1 class="form-title">File Your Claim</h1>
+        <section class="claims-section">
+            <img src="/public/images/claim.jpg" alt="Claims" class="claims-image">
+            <div class="form-container">
+                <form id="claims-form" class="claims-form" method="POST" novalidate>
+                    <!-- Name -->
+                    <input type="text" name="name" placeholder="Full Name" required pattern="[A-Za-z\s]+" title="Please enter a valid name.">
+                    
+                    <!-- NIC -->
+                    <input type="text" name="nic" placeholder="NIC Number" required pattern="\d{9}[VXvx]|\d{12}" title="Please enter a valid NIC (e.g., 123456789V or 123456789123).">
+                    
+                    <!-- Telephone -->
+                    <input type="tel" name="telephone" placeholder="Telephone Number" required pattern="\+?\d{10,15}" title="Please enter a valid telephone number.">
+                    
+                    <!-- Email -->
+                    <input type="email" name="email" placeholder="Email" required>
+                    
+                    <!-- Age -->
+                    <input type="number" name="age" placeholder="Age" required min="18" max="120" title="Age must be between 18 and 120.">
+                    
+                    <!-- Package -->
+                    <select name="package" required>
+                        <option value="" disabled selected>Package Type</option>
+                        <option value="Basic Package">Basic Package</option>
+                        <option value="Standard Package">Standard Package</option>
+                        <option value="Premium Package">Premium Package</option>
+                        <option value="Gold Package">Gold Package</option>
+                    </select>
+                    
+                    <!-- Non-communicable diseases -->
+                    <textarea name="non_communicable_diseases" placeholder="Non-communicable diseases (if any)" required></textarea>
+                    
+                    <!-- Additional information -->
+                    <textarea name="additional_info" placeholder="Additional Information (optional)"></textarea>
+                    
+                    <!-- Submit Button -->
+                    <button type="submit">Submit Claim</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <!-- JavaScript -->
+    <script src="/public/js/claims.js"></script>
+</body>
+</html>
