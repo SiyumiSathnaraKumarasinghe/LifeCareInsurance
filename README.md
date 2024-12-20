@@ -12,6 +12,7 @@ Welcome to the **Life Insurance Management System** project! This web applicatio
 - **Claims Handling**: Submit and manage insurance claims with ease.
 - **Admin Dashboard**: A comprehensive dashboard to monitor system data, manage users, and view claims.
 - **Responsive Design**: Fully responsive and accessible on all devices.
+- **Forgot Password with Email Verification**: Allow users to reset their password securely by confirming their email address.
 
 ---
 
