@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/css/registration.css">
+    <title>Update Client - Life Care Insurance</title>
+</head>
+<body>
+     <!-- Header -->
+     <div id="header"></div>
+
+    <main>
+        <h1>Update Client Information</h1>
+        <form id="update-form">
+            <div class="form-container">
+                <div class="image-container">
+                    <img src="/public/images/banner.png" alt="Claims" class="claims-image">
+                </div>
+                <div class="form-content">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="nic" name="nic" placeholder="Enter your NIC" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="date" id="date_of_birth" name="date_of_birth" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="contact_number" name="contact_number" placeholder="Enter your contact number" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="address" name="address" placeholder="Enter your address" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <select id="policy_type" name="policy_type" required>
+                            <option value="" disabled selected>Select Policy Type</option>
+                            <option value="Whole Life Insurance">Whole Life Insurance</option>
+                            <option value="Retirement Plan">Retirement Plan</option>
+                            <option value="Medical Insurance">Medical Insurance</option>
+                            <option value="Group Plan">Group Plan</option>
+                        </select>
+                    </div>                    
+                    <div class="form-group">
+                        <input type="number" id="coverage_amount" name="coverage_amount" placeholder="Enter coverage amount" required>
+                    </div>
+                    <div class="form-group">
+                        <select id="payment_frequency" name="payment_frequency" required>
+                            <option value="" disabled selected>Payment Frequency</option>
+                            <option value="Monthly">Monthly</option>
+                            <option value="Quarterly">Quarterly</option>
+                            <option value="Annually">Annually</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="beneficiary_name" name="beneficiary_name" placeholder="Enter beneficiary name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="beneficiary_relationship" name="beneficiary_relationship" placeholder="Enter beneficiary relationship">
+                    </div>
+                    <div class="form-group">
+                        <input type="number" id="height_cm" name="height_cm" placeholder="Enter height in cm" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="number" id="weight_kg" name="weight_kg" placeholder="Enter weight in kg" required>
+                    </div>
+                    <div class="form-group-container">
+                        <div class="form-group">
+                            <select id="smoker_status" name="smoker_status" required>
+                                <option value="" disabled selected>Smoker Status</option>
+                                <option value="No">No</option>
+                                <option value="Yes">Yes</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <select id="alcohol_status" name="alcohol_status" required>
+                                <option value="" disabled selected>Alcohol Consumption</option>
+                                <option value="No">No</option>
+                                <option value="Yes">Yes</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <textarea id="medical_conditions" name="medical_conditions" placeholder="Enter medical conditions"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="family_medical_history" name="family_medical_history" placeholder="Enter family medical history"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="occupation" name="occupation" placeholder="Enter your occupation" required>
+                    </div>
+                    <div class="form-group">
+                        <select id="annual_income" name="annual_income" required>
+                            <option value="" disabled selected>Select your annual income range</option>
+                            <option value="less_than_12">Less than 12 Lakhs</option>
+                            <option value="12_to_24">12 - 24 Lakhs</option>
+                            <option value="24_to_36">24 - 36 Lakhs</option>
+                            <option value="36_to_48">36 - 48 Lakhs</option>
+                            <option value="48_to_70">48 - 70 Lakhs</option>
+                            <option value="above_70">Above 70 Lakhs</option>
+                        </select>
+                    </div>                    
+                    <div class="form-group">
+                        <select id="payment_mode" name="payment_mode" required>
+                            <option value="" disabled selected>Select Payment Mode</option>
+                            <option value="Credit Card">Cash</option>
+                            <option value="Credit Card">Credit Card</option>
+                            <option value="Debit Card">Debit Card</option>
+                            <option value="Bank Transfer">Bank Transfer</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="bank_account_details" name="bank_account_details" placeholder="Enter bank account details"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="emergency_contact_name" name="emergency_contact_name" placeholder="Enter emergency contact name">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="emergency_contact_relationship" name="emergency_contact_relationship" placeholder="Enter emergency contact relationship">
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="emergency_contact_number" name="emergency_contact_number" placeholder="Enter emergency contact number">
+                    </div>
+                    <button type="submit">Update</button>
+                </div>
+            </div>
+        </form>
+    </main>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <script src="/public/js/reg-update.js"></script>
+    <script>
+        // Fetch the client data using JavaScript (You need to pass the client id)
+        const clientId = new URLSearchParams(window.location.search).get('id');
+        if (clientId) {
+            fetch(`/backend/api/get_client.php?id=${clientId}`)
+                .then(response => response.json())
+                .then(data => {
+                    // Pre-fill the form with client data
+                    document.getElementById('name').value = data.name;
+                    document.getElementById('nic').value = data.nic;
+                    document.getElementById('date_of_birth').value = data.date_of_birth;
+                    document.getElementById('contact_number').value = data.contact_number;
+                    document.getElementById('email').value = data.email;
+                    document.getElementById('address').value = data.address;
+                    document.getElementById('policy_type').value = data.policy_type;
+                    document.getElementById('coverage_amount').value = data.coverage_amount;
+                    document.getElementById('payment_frequency').value = data.payment_frequency;
+                    document.getElementById('beneficiary_name').value = data.beneficiary_name;
+                    document.getElementById('beneficiary_relationship').value = data.beneficiary_relationship;
+                    document.getElementById('height_cm').value = data.height_cm;
+                    document.getElementById('weight_kg').value = data.weight_kg;
+                    document.getElementById('smoker_status').value = data.smoker_status;
+                    document.getElementById('alcohol_status').value = data.alcohol_status;
+                    document.getElementById('medical_conditions').value = data.medical_conditions;
+                    document.getElementById('family_medical_history').value = data.family_medical_history;
+                    document.getElementById('occupation').value = data.occupation;
+                    document.getElementById('annual_income').value = data.annual_income;
+                    document.getElementById('payment_mode').value = data.payment_mode;
+                    document.getElementById('bank_account_details').value = data.bank_account_details;
+                    document.getElementById('emergency_contact_name').value = data.emergency_contact_name;
+                    document.getElementById('emergency_contact_relationship').value = data.emergency_contact_relationship;
+                    document.getElementById('emergency_contact_number').value = data.emergency_contact_number;
+                })
+                .catch(error => console.error('Error:', error));
+        }
+    </script>
+</body>
+</html>
