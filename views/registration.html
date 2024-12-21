@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/css/registration.css">
+    <title>Registration - Life Care Insurance</title>
+</head>
+<body>
+     <!-- Header -->
+     <div id="header"></div>
+
+    <main>
+        <h1>Client Registration</h1>
+        <form id="registration-form">
+            <div class="form-container">
+                <div class="image-container">
+                    <img src="/public/images/banner.png" alt="Claims" class="claims-image">
+                </div>
+                <div class="form-content">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="nic" name="nic" placeholder="Enter your NIC" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="date" id="date_of_birth" name="date_of_birth" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="contact_number" name="contact_number" placeholder="Enter your contact number" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="address" name="address" placeholder="Enter your address" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <select id="policy_type" name="policy_type" required>
+                            <option value="" disabled selected>Select Policy Type</option>
+                            <option value="whole_life">Whole Life Insurance</option>
+                            <option value="retirement_plan">Retirement Plan</option>
+                            <option value="medical_insurance">Medical Insurance</option>
+                            <option value="group_plan">Group Plan</option>
+                        </select>
+                    </div>                    
+                    <div class="form-group">
+                        <input type="number" id="coverage_amount" name="coverage_amount" placeholder="Enter coverage amount" required>
+                    </div>
+                    <div class="form-group">
+                        <select id="payment_frequency" name="payment_frequency" required>
+                            <option value="" disabled selected>Payment Frequency</option>
+                            <option value="Monthly">Monthly</option>
+                            <option value="Quarterly">Quarterly</option>
+                            <option value="Annually">Annually</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="beneficiary_name" name="beneficiary_name" placeholder="Enter beneficiary name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="beneficiary_relationship" name="beneficiary_relationship" placeholder="Enter beneficiary relationship">
+                    </div>
+                    <div class="form-group">
+                        <input type="number" id="height_cm" name="height_cm" placeholder="Enter height in cm" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="number" id="weight_kg" name="weight_kg" placeholder="Enter weight in kg" required>
+                    </div>
+                    <div class="form-group-container">
+                        <div class="form-group">
+                            <select id="smoker_status" name="smoker_status" required>
+                                <option value="" disabled selected>Smoker Status</option>
+                                <option value="No">No</option>
+                                <option value="Yes">Yes</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <select id="alcohol_status" name="alcohol_status" required>
+                                <option value="" disabled selected>Alcohol Consumption</option>
+                                <option value="No">No</option>
+                                <option value="Yes">Yes</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <textarea id="medical_conditions" name="medical_conditions" placeholder="Enter medical conditions"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="family_medical_history" name="family_medical_history" placeholder="Enter family medical history"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="occupation" name="occupation" placeholder="Enter your occupation" required>
+                    </div>
+                    <div class="form-group">
+                        <select id="annual_income" name="annual_income" required>
+                            <option value="" disabled selected>Select your annual income range</option>
+                            <option value="less_than_12">Less than 12 Lakhs</option>
+                            <option value="12_to_24">12 - 24 Lakhs</option>
+                            <option value="24_to_36">24 - 36 Lakhs</option>
+                            <option value="36_to_48">36 - 48 Lakhs</option>
+                            <option value="48_to_70">48 - 70 Lakhs</option>
+                            <option value="above_70">Above 70 Lakhs</option>
+                        </select>
+                    </div>                    
+                    <div class="form-group">
+                        <select id="payment_mode" name="payment_mode" required>
+                            <option value="" disabled selected>Select Payment Mode</option>
+                            <option value="Credit Card">Cash</option>
+                            <option value="Credit Card">Credit Card</option>
+                            <option value="Debit Card">Debit Card</option>
+                            <option value="Bank Transfer">Bank Transfer</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="bank_account_details" name="bank_account_details" placeholder="Enter bank account details"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="emergency_contact_name" name="emergency_contact_name" placeholder="Enter emergency contact name">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="emergency_contact_relationship" name="emergency_contact_relationship" placeholder="Enter emergency contact relationship">
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="emergency_contact_number" name="emergency_contact_number" placeholder="Enter emergency contact number">
+                    </div>
+                    <button type="submit">Submit</button>
+                </div>
+            </div>
+        </form>
+    </main>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <script src="/public/js/registration.js"></script>   
+</body>
+</html>
